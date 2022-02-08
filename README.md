@@ -21,12 +21,12 @@ ATOM BabiesはM5Stack社の<a href="https://shop.m5stack.com/collections/atom-se
 ## ATOM Babiesの動作例
 
 <p align="center">
-<a href="https://youtu.be/lBxplz1Vmxc"><img src="https://img.youtube.com/vi/lBxplz1Vmxc/0.jpg" width="480"/></a>
+<a href="https://youtu.be/lBxplz1Vmxc"><img src="https://img.youtube.com/vi/lBxplz1Vmxc/0.jpg" width="480"/></a><br>
 ATOM Babies:あっちむいてほいで勝てない
 </p>
 
 <p align="center">
-<a href="https://youtu.be/yEB1nSGFLgU"><img src="https://img.youtube.com/vi/yEB1nSGFLgU/0.jpg" width="480"/></a>
+<a href="https://youtu.be/yEB1nSGFLgU"><img src="https://img.youtube.com/vi/yEB1nSGFLgU/0.jpg" width="480"/></a><br>
 ATOM Babies: 自動手指消毒器「テッテ」とロボホンとの連携
 </p>
 
