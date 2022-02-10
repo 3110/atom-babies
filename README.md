@@ -60,6 +60,27 @@ ATOM Babiesに必要なATOM Matrix用のUiFlowファームウェアは，M5Burne
 
 ATOM Babiesのカスタムブロックを使って作ったプログラム（m5fファイル）を読み込むときは，あらかじめATOM Babiesのカスタムブロックを読み込ませておく必要があります。
 
+## サンプルの説明
+
+### `samples/bow.m5f`
+
+[![bow.m5f](https://i.gyazo.com/51115ebf0233275e3ced754b50e8eebb.png)](https://gyazo.com/51115ebf0233275e3ced754b50e8eebb)
+
+ATOM Matrixの画面を押すと，押すごとにおじぎをする回数が増えます。
+
+### `samples/greeting.m5f`
+
+ヒトが目の前に来ると顔を出しておじぎをします。
+
+<p align="center">
+<a href="https://i.gyazo.com/4491f8348d1d45264d212cc0f971b629.jpg"><img src="https://i.gyazo.com/4491f8348d1d45264d212cc0f971b629.jpg" width="480"/></a><br>
+
+[ATOM Mate](https://shop.m5stack.com/products/atom-mate)を使用して[PIR Hat](https://shop.m5stack.com/products/m5stickccompatible-hat-pir-sensor)を接続して利用します。USB-Cの口を上にした状態が正しい向きになります。
+
+PIRはPassive pyroelectric infrared detector（受動焦電型赤外線検出器）の略で，ヒトが発する赤外線を検知し，前にヒトがいるかを判断します。PIR Hatの仕様で，いったん検知した後，次に検知するまでに2秒間の遅れがあります。
+
+[![greetnig.m5b](https://i.gyazo.com/acaefaef9e62a6ed2b94061ae28afbbc.png)](https://gyazo.com/acaefaef9e62a6ed2b94061ae28afbbc)
+
 ## 参考
 
 * [ATOM Babies](https://youtube.com/playlist?list=PL5yIB9ecl31VxCF3HHRsOgXIgWvoJSiL5)（YouTubeチャンネル）
