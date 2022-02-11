@@ -86,6 +86,12 @@ PIRはPassive pyroelectric infrared detector（受動焦電型赤外線検出器
 
 [![greetnig.m5b](https://i.gyazo.com/a1bf42998acf3b3b3bdb82d4d4d77913.png)](https://gyazo.com/a1bf42998acf3b3b3bdb82d4d4d77913)
 
+### `samples/blink.m5f`
+
+ATOM Matrixの画面を押すたびに，まばたきを始めたり止めたりします。まばたきの設定はデフォルト（1回のまばたき，目を開けている時間が500ミリ秒，目を閉じている時間が100ミリ秒，次のまばたきを始めるまでの間隔が1000ミリ秒）です。
+
+[![blink.m5f](https://i.gyazo.com/164b711efc9d2a0e0296c6bdf9694a44.png)](https://gyazo.com/164b711efc9d2a0e0296c6bdf9694a44)
+
 ## 参考
 
 * [ATOM Babies](https://youtube.com/playlist?list=PL5yIB9ecl31VxCF3HHRsOgXIgWvoJSiL5)（YouTubeチャンネル）
