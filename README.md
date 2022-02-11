@@ -84,7 +84,7 @@ ATOM Babies:人が来るとあいさつをする
 
 PIRはPassive pyroelectric infrared detector（受動焦電型赤外線検出器）の略で，ヒトが発する赤外線を検知し，前にヒトがいるかを判断します。PIR Hatの仕様で，いったん検知した後，次に検知するまでに2秒間の遅れがあります。
 
-[![greetnig.m5b](https://i.gyazo.com/acaefaef9e62a6ed2b94061ae28afbbc.png)](https://gyazo.com/acaefaef9e62a6ed2b94061ae28afbbc)
+[![greetnig.m5b](https://i.gyazo.com/a1bf42998acf3b3b3bdb82d4d4d77913.png)](https://gyazo.com/a1bf42998acf3b3b3bdb82d4d4d77913)
 
 ## 参考
 
