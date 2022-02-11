@@ -70,6 +70,11 @@ ATOM Matrixの画面を押すと，押すごとにおじぎをする回数が増
 
 ### `samples/greeting.m5f`
 
+<p align="center">
+<a href="https://youtu.be/hI7jYVK7nX0"><img src="https://img.youtube.com/vi/hI7jYVK7nX0/0.jpg" width="480"/></a><br>
+ATOM Babies:人が来るとあいさつをする
+</p>
+
 ヒトが目の前に来ると顔を出しておじぎをします。
 
 <p align="center">
