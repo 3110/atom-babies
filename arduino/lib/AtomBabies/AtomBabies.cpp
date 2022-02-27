@@ -79,7 +79,6 @@ AtomBabies::AtomBabies(FacePosition position, FaceOrientation orientation,
       _blinking(false),
       _blinkParam(DEFAULT_BLINK),
       _bowParam(DEFAULT_BOW) {
-    SERIAL_PRINTF_LN("AtomBabies Version %s", VERSION);
 }
 
 AtomBabies::~AtomBabies(void) {
@@ -90,6 +89,7 @@ bool AtomBabies::begin(void) {
     xTaskCreatePinnedToCore(blinkTask, BLINK_TASK_NAME, BLINK_TASK_STACK_DEPTH,
                             this, BLINK_TASK_PRIORITY, nullptr,
                             BLINK_TASK_CORE_ID);
+    SERIAL_PRINTF_LN("AtomBabies Version v%s", VERSION);
     return true;
 }
 
