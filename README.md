@@ -52,7 +52,7 @@ ATOM Babies に必要な ATOM Matrix 用の UiFlow ファームウェアは，M5
 
 [![Customメニュー](https://i.gyazo.com/34bd1e3d9296cb60d0fe6e959e13490e.png)](https://gyazo.com/34bd1e3d9296cb60d0fe6e959e13490e)
 
-カスタムメニューを選択し，「Open \*.m5b file」を押し，`atom_babies_ja.m5b`を選択して読み込みます。
+カスタムメニューを選択し，「Open \*.m5b file」を押し，`uiflow/atom_babies_ja.m5b`を選択して読み込みます。
 
 [![ATOM_Babiesメニュー](https://i.gyazo.com/d4cb5540307740aca6e03f29572a0bc8.png)](https://gyazo.com/d4cb5540307740aca6e03f29572a0bc8)
 
@@ -62,13 +62,13 @@ ATOM Babies のカスタムブロックを使って作ったプログラム（m5
 
 ## サンプルの説明
 
-### `samples/bow.m5f`
+### `uiflow/samples/bow.m5f`
 
 [![bow.m5f](https://i.gyazo.com/51115ebf0233275e3ced754b50e8eebb.png)](https://gyazo.com/51115ebf0233275e3ced754b50e8eebb)
 
 ATOM Matrix の画面を押すと，押すごとにおじぎをする回数が増えます。
 
-### `samples/greeting.m5f`
+### `uiflow/samples/greeting.m5f`
 
 <p align="center">
 <a href="https://youtu.be/hI7jYVK7nX0"><img src="https://img.youtube.com/vi/hI7jYVK7nX0/0.jpg" width="480"/></a><br>
@@ -86,7 +86,7 @@ PIR は Passive pyroelectric infrared detector（受動焦電型赤外線検出�
 
 [![greetnig.m5b](https://i.gyazo.com/a1bf42998acf3b3b3bdb82d4d4d77913.png)](https://gyazo.com/a1bf42998acf3b3b3bdb82d4d4d77913)
 
-### `samples/blink.m5f`
+### `uiflow/samples/blink.m5f`
 
 ATOM Matrix の画面を押すたびに，まばたきを始めたり止めたりします。まばたきの設定はデフォルト（1 回のまばたき，目を開けている時間が 500 ミリ秒，目を閉じている時間が 100 ミリ秒，次のまばたきを始めるまでの間隔が 1000 ミリ秒）です。
 
