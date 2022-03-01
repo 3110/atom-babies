@@ -1,4 +1,4 @@
-# Arduino 版 ATOM BAbies
+# Arduino 版 ATOM Babies
 
 ## 動作環境
 
