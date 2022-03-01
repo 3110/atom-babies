@@ -58,7 +58,7 @@ ATOM Babies:人が来るとあいさつをする（YouTube）
 人が目の前に来ると顔を出しておじぎをします。
 
 <p align="center">
-<a href="https://i.gyazo.com/4491f8348d1d45264d212cc0f971b629.jpg"><img src="https://i.gyazo.com/4491f8348d1d45264d212cc0f971b629.jpg" width="480"/></a>
+<a href="https://i.gyazo.com/4491f8348d1d45264d212cc0f971b629.jpg"><img src="https://i.gyazo.com/4491f8348d1d45264d212cc0f971b629.jpg" width="480"/></a><br>
 ATOM MatrixにATOM MateとPIR Hatを接続
 </p>
 
