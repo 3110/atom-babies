@@ -46,6 +46,13 @@ PlatformIO で環境`atom-babies-bow`を選択してコンパイルします。
 
 ATOM Babies の顔（ボタン）を押すとおじぎをします。押すごとにおじぎをする回数が増えます。
 
+## `examples/blink`
+
+PlatformIO で環境`atom-babies-blink`を選択してコンパイルします。
+
+ATOM Babies の顔（ボタン）を押すたびに，まばたきを始めたり止めたりします。
+まばたきの設定はデフォルト（`AtomBabies.cpp`の`DEFAULT_BLINK_PARAM`を参照，2 回以下のランダムな回数でのまばたき，目を開けている時間が 500 ミリ秒，目を閉じている時間が 100 ミリ秒，次のまばたきを始めるまでの間隔が 1000 ミリ秒）です。
+
 ### `examples/all-faces`
 
 PlatformIO で環境`atom-babies-all-faces`を選択してコンパイルします。
