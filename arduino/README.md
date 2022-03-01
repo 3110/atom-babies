@@ -16,17 +16,39 @@ platformio run -e atom-babies-all-faces --target=upload
 platformio run -e atom-babies-bow --target=upload
 ```
 
+## 実装方法
+
+通常の顔の向きで顔を表示するための最低限の実装は以下のようになります。
+`M5.begin()`と`M5.update()`はそれぞれ`babies.begin()`と`babies.update()`の中で呼んでいるので，改めて呼ぶ必要はありません。
+
+```c++
+#include "AtomBabies.h"
+
+using namespace M5Stack_AtomBabies;
+
+AtomBabies babies;
+
+void setup(void) {
+    babies.begin();
+    babies.setFace(FaceNormal);
+}
+
+void loop(void) {
+    babies.update();
+}
+```
+
 ## サンプルの説明
 
 ### `examples/bow`
 
-PlatformIO で環境`env:atom-babies-bow`を選択してコンパイルします。
+PlatformIO で環境`atom-babies-bow`を選択してコンパイルします。
 
 ATOM Babies の顔（ボタン）を押すとおじぎをします。押すごとにおじぎをする回数が増えます。
 
 ### `examples/all-faces`
 
-PlatformIO で環境`env:atom-babies-all-faces`を選択してコンパイルします。
+PlatformIO で環境`atom-babies-all-faces`を選択してコンパイルします。
 
 ATOM Babies の顔の表示を一通り表示します。通常の向きから開始し，まばたきをした状態で始まります。ATOM Babies の顔（ボタン）を押すごとに右 → 逆さま → 左 → 通常と繰り返します。
 
