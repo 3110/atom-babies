@@ -89,7 +89,7 @@ bool AtomBabies::begin(void) {
     xTaskCreatePinnedToCore(blinkTask, BLINK_TASK_NAME, BLINK_TASK_STACK_DEPTH,
                             this, BLINK_TASK_PRIORITY, nullptr,
                             BLINK_TASK_CORE_ID);
-    SERIAL_PRINTF_LN("AtomBabies Version v%s", VERSION);
+    SERIAL_PRINTF_LN("ATOM Babies v%s", VERSION);
     return true;
 }
 
