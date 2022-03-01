@@ -46,6 +46,18 @@ PlatformIO で環境`atom-babies-bow`を選択します。
 
 ATOM Babies の顔（ボタン）を押すとおじぎをします。押すごとにおじぎをする回数が増えます。
 
+### `examples/greeting`
+
+PlatformIO で環境`atom-babies-greeting`を選択します。
+
+ヒトが目の前に来ると顔を出しておじぎをします。
+
+[ATOM Mate](https://shop.m5stack.com/products/atom-mate)を使用して[PIR Hat](https://shop.m5stack.com/products/m5stickccompatible-hat-pir-sensor)を接続して利用します。
+PIR Hat が胴体となるため，顔の向きは`OrientationUpsideDown`にします。
+
+PIR は Passive pyroelectric infrared detector（受動焦電型赤外線検出器）の略で，ヒトが発する赤外線を検知し，前にヒトがいるかを判断します。
+PIR Hat の仕様で，いったん検知した後，次に検知するまでに 2 秒間の遅れがあります。
+
 ### `examples/blink`
 
 PlatformIO で環境`atom-babies-blink`を選択します。
