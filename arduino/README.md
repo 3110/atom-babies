@@ -4,16 +4,16 @@
 
 [PlatformIO](https://platformio.org/)環境に対応しています。動作確認は Windows 11 上で [PlatformIO IDE for VSCode](https://marketplace.visualstudio.com/items?itemName=platformio.platformio-ide) を使用して実施しています。
 
-VS Code からコンパイル・ファームウェアの書き込みをする場合は，Switch PlatformIO Project Environment で環境（今のところ`atom-babies-all-faces`，`atom-babies-bow`の 2 つ）を選択し，PlatformIO:Upload ボタンを押します。
+VS Code からコンパイル・ファームウェアの書き込みをする場合は，Switch PlatformIO Project Environment で環境（`env:atom-babies-all-faces`，`env:atom-babies-blink`，`env:atom-babies-bow`）を 1 つ選択し，PlatformIO:Upload ボタンを押します。
 
 PlatformIO のターミナルからコンパイル・ファームウェアの書き込みをする場合は以下を実行します。
 
 ```bash
 git clone https://github.com/3110/atom-babies
 cd atom-babies
-platformio run -e atom-babies-all-faces --target=upload
-もしくは
-platformio run -e atom-babies-bow --target=upload
+platformio run -e atom-babies-all-faces --target=upload # 例：all-faces の場合
+platformio run -e atom-babies-blink --target=upload     # 例：blinkの場合
+platformio run -e atom-babies-bow --target=upload       # 例：bowの場合
 ```
 
 ## 実装方法
