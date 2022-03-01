@@ -46,6 +46,3 @@ ATOM Babies: 自動手指消毒器「テッテ」とロボホンとの連携
 ## 参考
 
 - [ATOM Babies](https://youtube.com/playlist?list=PL5yIB9ecl31VxCF3HHRsOgXIgWvoJSiL5)（YouTube チャンネル）
-- [UiFlow](https://flow.m5stack.com/)
-- [UiFlow Block Maker](http://block-maker.m5stack.com/)（ベータ版）
-- [M5Burner の使いかた](https://zenn.dev/saitotetsuya/articles/m5stack_m5burner)
