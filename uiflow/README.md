@@ -44,17 +44,20 @@ ATOM Babies の顔（ボタン）を押すとおじぎをします。押すご�
 
 <p align="center">
 <a href="https://youtu.be/hI7jYVK7nX0"><img src="https://img.youtube.com/vi/hI7jYVK7nX0/0.jpg" width="480"/></a><br>
-ATOM Babies:人が来るとあいさつをする
+ATOM Babies:人が来るとあいさつをする（YouTube）
 </p>
 
-ヒトが目の前に来ると顔を出しておじぎをします。
+人が目の前に来ると顔を出しておじぎをします。
 
 <p align="center">
-<a href="https://i.gyazo.com/4491f8348d1d45264d212cc0f971b629.jpg"><img src="https://i.gyazo.com/4491f8348d1d45264d212cc0f971b629.jpg" width="480"/></a><br>
+<a href="https://i.gyazo.com/4491f8348d1d45264d212cc0f971b629.jpg"><img src="https://i.gyazo.com/4491f8348d1d45264d212cc0f971b629.jpg" width="480"/></a>
+ATOM MatrixにATOM MateとPIR Hatを接続
+</p>
 
 [ATOM Mate](https://shop.m5stack.com/products/atom-mate)を使用して[PIR Hat](https://shop.m5stack.com/products/m5stickccompatible-hat-pir-sensor)を接続して利用します。USB-C の口を上にした状態が正しい向きになります。
 
-PIR は Passive pyroelectric infrared detector（受動焦電型赤外線検出器）の略で，ヒトが発する赤外線を検知し，前にヒトがいるかを判断します。PIR Hat の仕様で，いったん検知した後，次に検知するまでに 2 秒間の遅れがあります。
+PIR は Passive pyroelectric infrared detector（受動焦電型赤外線検出器）の略で，人間が発する赤外線を検知し，目の前にいるかを判断します。
+PIR Hat の仕様で，いったん検知した後，次に検知するまでに 2 秒間の遅れがあります。
 
 [![samples/greetnig.m5b](https://i.gyazo.com/a1bf42998acf3b3b3bdb82d4d4d77913.png)](https://gyazo.com/a1bf42998acf3b3b3bdb82d4d4d77913)
 
