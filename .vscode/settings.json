@@ -1,37 +1,9 @@
 {
-    "python.defaultInterpreterPath": "${workspaceFolder}/.venv",
-    "python.linting.pylintEnabled": false,
-    "python.linting.lintOnSave": true,
-    "python.linting.flake8Args": [
-        "--max-line-length",
-        "119",
-        "--ignore=E203,W503,W504"
-    ],
-    "python.linting.flake8Enabled": true,
-    "python.formatting.provider": "black",
-    "python.formatting.blackArgs": [
-        "--line-length=119"
-    ],
-    "[python]": {
-        "editor.defaultFormatter": null,
-        "editor.formatOnSave": true,
-        "editor.formatOnPaste": false,
-        "editor.formatOnSaveMode": "file",
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        },
-    },
-    "C_Cpp.intelliSenseEngine": "Tag Parser",
-    "C_Cpp.clang_format_style": "{BasedOnStyle: Google, IndentWidth: 4, AllowShortFunctionsOnASingleLine: None, AccessModifierOffset: -4}",
-    "[cpp]": {
-        "editor.formatOnSave": true,
-        "editor.formatOnType": true,
-    },
     "cSpell.words": [
         "Blockly",
         "CRGB",
         "jscode",
         "platformio",
         "uiflow"
-    ],
+    ]
 }
