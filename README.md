@@ -38,7 +38,7 @@ ATOM Babies に必要な ATOM Matrix 用の UiFlow ファームウェアは，M5
 
 ### ATOM Babies のカスタムブロックを UiFlow に読み込む
 
-UiFlow のカスタムブロックは拡張子が`m5b`のファイルで，[UiFlow Block Maker](http://block-maker.m5stack.com/)で作成することができます。
+UiFlow のカスタムブロックは拡張子が`m5b`のファイルで，[UiFlow Block Maker](http://block-maker.m5stack.com/)や私が作った[UiFlow Custom Block Generator](https://github.com/3110/uiflow-custom-block-generator)で作成することができます。
 
 [![Customメニュー](https://i.gyazo.com/34bd1e3d9296cb60d0fe6e959e13490e.png)](https://gyazo.com/34bd1e3d9296cb60d0fe6e959e13490e)
 
@@ -95,8 +95,23 @@ ATOM Babies の顔（ボタン）を押すたびに，まばたきを始めた�
 
 [![samples/blink.m5f](https://i.gyazo.com/164b711efc9d2a0e0296c6bdf9694a44.png)](https://gyazo.com/164b711efc9d2a0e0296c6bdf9694a44)
 
+## 付録：UiFlow Custom Block Generator の使い方
+
+`pip`で UiFlow Custom Block Generator をインストールします。
+
+```bash
+pip install git+https://github.com/3110/uiflow-custom-block-generator
+```
+
+UiFlow Custom Generator を実行します。以下を実行するとカレントディレクトリに`atom_babies_ja.m5b`が生成されます。
+
+```bash
+python -m uiflow_custom_block_generator atom_babies/atom_babies_ja.json -t .
+```
+
 ## 参考
 
 - [ATOM Babies](https://youtube.com/playlist?list=PL5yIB9ecl31VxCF3HHRsOgXIgWvoJSiL5)（YouTube チャンネル）
 - [UiFlow](https://flow.m5stack.com/)
 - [UiFlow Block Maker](http://block-maker.m5stack.com/)
+- [UiFlow Custom Block Generator](https://github.com/3110/uiflow-custom-block-generator)
