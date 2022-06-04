@@ -71,11 +71,11 @@ def _ab_get_led_position(orientation, position):
 
 
 def _ab_fill(color):
-    rgb.setColorFrom(_ab_get_const('MIN_LED_POS'), _ab_get_const('MAX_LED_POS'), color)  # noqa: F821
+    rgb.setColorFrom(_ab_get_const('MIN_LED_POS'), _ab_get_const('MAX_LED_POS'), color)  # type: ignore # noqa: F821
 
 
 def _ab_set_color(pos, color, orientation):
-    rgb.setColor(_ab_get_led_position(orientation, pos), color)  # noqa: F821
+    rgb.setColor(_ab_get_led_position(orientation, pos), color)  # type: ignore # noqa: F821
 
 
 def _ab_get_eye_position(pos):
