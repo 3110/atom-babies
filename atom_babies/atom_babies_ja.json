@@ -14,7 +14,7 @@
     },
     {
       "name": "update_atom_babies",
-      "type": "execute",
+      "type": "value",
       "params": [{ "name": "ATOM Babiesを更新する", "type": "label" }]
     },
     {

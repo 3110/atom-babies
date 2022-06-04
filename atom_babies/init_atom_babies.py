@@ -256,6 +256,6 @@ def _ab_update_orientation():
     return False
 
 def _ab_update():
-    _ab_update_orientation()
+    return _ab_update_orientation()
 
 _ab_update_orientation()
