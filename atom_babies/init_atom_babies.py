@@ -2,6 +2,7 @@ import _thread as _ab_t
 import time
 
 _ab_const = {
+    'VERSION': "v0.0.5",
     'MIN_LED_POS': 1,
     'MAX_LED_POS': 25,
     'EYE_POSITIONS': {
@@ -45,6 +46,8 @@ def _ab_get_const(key):
 def _ab_get_rgb(r, g, b):
     return int('0x{:02x}{:02x}{:02x}'.format(r, g, b))
 
+def _ab_get_version():
+    return _ab_get_const('VERSION')
 
 _ab_global = {
     'eye_color': ${_eye_color},

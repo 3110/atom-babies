@@ -143,6 +143,11 @@
         { "name": "_close", "type": "variable" },
         { "name": "_interval", "type": "variable" }
       ]
+    },
+    {
+      "name": "get_version",
+      "type": "value",
+      "params": [{ "name": "バージョンの取得", "type": "label" }]
     }
   ]
 }
