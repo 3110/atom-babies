@@ -1,5 +1,5 @@
-import imu
 import _thread as _ab_t
+import sys
 import time
 
 _ab_const = {
@@ -39,7 +39,9 @@ _ab_const = {
     'DEFAULT_BLINK_INTERVAL_FUNCTION': '_ab_get_blink_interval',
 }
 
-imu0 = imu.IMU()
+if 'imu' not in sys.modules:
+    import imu
+    imu0 = imu.IMU()
 
 def _ab_get_const(key):
    return _ab_const[key]
