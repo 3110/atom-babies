@@ -41,6 +41,39 @@
       "params": [{ "name": "顔を消す", "type": "label" }]
     },
     {
+      "name": "get_orientation",
+      "type": "value",
+      "params": [{ "name": "顔の向きの取得", "type": "label" }]
+    },
+    {
+      "name": "set_orientation",
+      "type": "execute",
+      "params": [
+        { "name": "顔の向きを設定する", "type": "label" },
+        { "name": "_orientation", "type": "variable" }
+      ]
+    },
+    {
+      "name": "get_orientation_normal",
+      "type": "value",
+      "params": [{ "name": "顔の向き：通常", "type": "label" }]
+    },
+    {
+      "name": "get_orientation_right",
+      "type": "value",
+      "params": [{ "name": "顔の向き：右", "type": "label" }]
+    },
+    {
+      "name": "get_orientation_upside_down",
+      "type": "value",
+      "params": [{ "name": "顔の向き：逆", "type": "label" }]
+    },
+    {
+      "name": "get_orientation_left",
+      "type": "value",
+      "params": [{ "name": "顔の向き：左", "type": "label" }]
+    },
+    {
       "name": "set_orientation_normal",
       "type": "execute",
       "params": [{ "name": "顔の向きを通常にする", "type": "label" }]
