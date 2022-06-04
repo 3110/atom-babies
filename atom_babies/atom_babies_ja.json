@@ -196,6 +196,15 @@
       ]
     },
     {
+      "name": "set_digit",
+      "type": "execute",
+      "params": [
+        { "name": "数字を表示する", "type": "label" },
+        { "name": "_digit", "type": "variable" },
+        { "name": "_color", "type": "variable" }
+      ]
+    },
+    {
       "name": "get_version",
       "type": "value",
       "params": [{ "name": "バージョンの取得", "type": "label" }]
