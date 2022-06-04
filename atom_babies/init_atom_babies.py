@@ -1,3 +1,4 @@
+import imu
 import _thread as _ab_t
 import time
 
@@ -38,6 +39,7 @@ _ab_const = {
     'DEFAULT_BLINK_INTERVAL_FUNCTION': '_ab_get_blink_interval',
 }
 
+imu0 = imu.IMU()
 
 def _ab_get_const(key):
    return _ab_const[key]
@@ -55,6 +57,8 @@ _ab_global = {
     'background_color': ${_background_color},
     'position': 'POS_NORMAL',
     'orientation': 'ORI_NORMAL',
+    'auto_orientation': True,
+    'gravity_threshold': 0.75,
     'blink_thread_running': False,
     'blink_running': False,
     'blink_interval_function': _ab_get_const('DEFAULT_BLINK_INTERVAL_FUNCTION'),
@@ -214,3 +218,42 @@ def _ab_terminate_blink():
 
 def _ab_get_blink_interval():
     return _ab_get_const('BLINK_INTERVAL')
+
+def _ab_set_gravity_threshold(threshold):
+    _ab_set_global('gravity_threshold', threshold)
+
+def _ab_get_gravity_threshold():
+    return _ab_get_global('gravity_threshold')
+
+def _ab_detect_orientation():
+    ax, ay, az = imu0.acceleration
+    threshold = _ab_get_gravity_threshold()
+    if ay >= threshold:
+        return 'ORI_NORMAL'
+    elif ax >= threshold:
+        return 'ORI_RIGHT'
+    elif ax <= -threshold:
+        return 'ORI_LEFT'
+    elif ay <= -threshold:
+        return 'ORI_UPSIDE_DOWN'
+    else:
+        return _ab_get_global('orientation')
+
+def _ab_is_auto_orientation():
+    return _ab_get_global('auto_orientation')
+
+def _ab_set_auto_orientation(auto_orientation):
+    _ab_set_global('auto_orientation', auto_orientation)
+
+def _ab_update_orientation():
+    if _ab_is_auto_orientation():
+        o = _ab_detect_orientation()
+        if o != _ab_get_global('orientation'):
+            _ab_set_global('orientation', o)
+            return True
+    return False
+
+def _ab_update():
+    _ab_update_orientation()
+
+_ab_update_orientation()

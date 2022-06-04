@@ -13,6 +13,11 @@
       ]
     },
     {
+      "name": "update_atom_babies",
+      "type": "execute",
+      "params": [{ "name": "ATOM Babiesを更新する", "type": "label" }]
+    },
+    {
       "name": "rgb",
       "type": "value",
       "params": [
@@ -39,6 +44,19 @@
       "name": "clear_face",
       "type": "execute",
       "params": [{ "name": "顔を消す", "type": "label" }]
+    },
+    {
+      "name": "set_auto_orientation",
+      "type": "execute",
+      "params": [
+        { "name": "自動的に顔の向きを設定する", "type": "label" },
+        { "name": "_is_auto_orientation", "type": "variable" }
+      ]
+    },
+    {
+      "name": "is_auto_orientation",
+      "type": "value",
+      "params": [{ "name": "自動的に顔の向きを設定するか？", "type": "label" }]
     },
     {
       "name": "get_orientation",
