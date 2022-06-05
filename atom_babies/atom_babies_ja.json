@@ -13,6 +13,11 @@
       ]
     },
     {
+      "name": "update_atom_babies",
+      "type": "value",
+      "params": [{ "name": "ATOM Babiesを更新する", "type": "label" }]
+    },
+    {
       "name": "rgb",
       "type": "value",
       "params": [
@@ -39,6 +44,52 @@
       "name": "clear_face",
       "type": "execute",
       "params": [{ "name": "顔を消す", "type": "label" }]
+    },
+    {
+      "name": "set_auto_orientation",
+      "type": "execute",
+      "params": [
+        { "name": "自動的に顔の向きを設定する", "type": "label" },
+        { "name": "_is_auto_orientation", "type": "variable" }
+      ]
+    },
+    {
+      "name": "is_auto_orientation",
+      "type": "value",
+      "params": [{ "name": "自動的に顔の向きを設定するか？", "type": "label" }]
+    },
+    {
+      "name": "get_orientation",
+      "type": "value",
+      "params": [{ "name": "顔の向きの取得", "type": "label" }]
+    },
+    {
+      "name": "set_orientation",
+      "type": "execute",
+      "params": [
+        { "name": "顔の向きを設定する", "type": "label" },
+        { "name": "_orientation", "type": "variable" }
+      ]
+    },
+    {
+      "name": "get_orientation_normal",
+      "type": "value",
+      "params": [{ "name": "顔の向き：通常", "type": "label" }]
+    },
+    {
+      "name": "get_orientation_right",
+      "type": "value",
+      "params": [{ "name": "顔の向き：右", "type": "label" }]
+    },
+    {
+      "name": "get_orientation_upside_down",
+      "type": "value",
+      "params": [{ "name": "顔の向き：逆", "type": "label" }]
+    },
+    {
+      "name": "get_orientation_left",
+      "type": "value",
+      "params": [{ "name": "顔の向き：左", "type": "label" }]
     },
     {
       "name": "set_orientation_normal",
@@ -143,6 +194,30 @@
         { "name": "_close", "type": "variable" },
         { "name": "_interval", "type": "variable" }
       ]
+    },
+    {
+      "name": "set_digit",
+      "type": "execute",
+      "params": [
+        { "name": "数字を表示する", "type": "label" },
+        { "name": "_digit", "type": "variable" },
+        { "name": "_color", "type": "variable" }
+      ]
+    },
+    {
+      "name": "scroll_digits",
+      "type": "execute",
+      "params": [
+        { "name": "数値をスクロール表示する", "type": "label" },
+        { "name": "_digits", "type": "variable" },
+        { "name": "_color", "type": "variable" },
+        { "name": "_interval_ms", "type": "variable" }
+      ]
+    },
+    {
+      "name": "get_version",
+      "type": "value",
+      "params": [{ "name": "バージョンの取得", "type": "label" }]
     }
   ]
 }
