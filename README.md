@@ -95,6 +95,10 @@ ATOM Babies の顔（ボタン）を押すたびに，まばたきを始めた�
 
 [![samples/blink.m5f](https://i.gyazo.com/164b711efc9d2a0e0296c6bdf9694a44.png)](https://gyazo.com/164b711efc9d2a0e0296c6bdf9694a44)
 
+### `samples/digits.m5f`
+
+ATOM Babies の顔（ボタン）を押すたびに 0 から順に数字が表示されます。2 桁以上の数字は各桁を順に表示します。
+
 ## 付録：UiFlow Custom Block Generator の使い方
 
 `pip`で UiFlow Custom Block Generator をインストールします。

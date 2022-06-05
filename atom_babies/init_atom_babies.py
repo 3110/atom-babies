@@ -6,6 +6,7 @@ _ab_const = {
     'VERSION': "v0.0.5",
     'MIN_LED_POS': 1,
     'MAX_LED_POS': 25,
+    'LED_WIDTH': 5,
     'EYE_POSITIONS': {
         'POS_TOP': [2, 4],
         'POS_UP': [7, 9],
@@ -76,6 +77,7 @@ _ab_global = {
     'blink_thread_running': False,
     'blink_running': False,
     'blink_interval_function': _ab_get_const('DEFAULT_BLINK_INTERVAL_FUNCTION'),
+    'scroll_buffer': []
 }
 
 
@@ -270,10 +272,43 @@ def _ab_update_orientation():
 def _ab_update():
     return _ab_update_orientation()
 
+def _ab_get_scroll_buffer():
+    return _ab_get_global('scroll_buffer')
+
+def _ab_update_scroll_buffer(pos):
+    _ab_get_scroll_buffer().append(pos)
+
+def _ab_purge_scroll_buffer():
+    w = _ab_get_const('LED_WIDTH')
+    _ab_global['scroll_buffer'] = [p - 1 for p in _ab_global['scroll_buffer'] if (p - 1) % w != 0]
+
+def _ab_get_digit_positions(digit):
+    return _ab_get_const('DIGITS')[digit]
+
+def _ab_display_scroll_buffer(color, interval):
+    _ab_update_orientation()
+    for pos in _ab_get_scroll_buffer():
+        _ab_set_color(pos, color, _ab_get_orientation())
+    time.sleep_ms(interval)
+    for pos in _ab_get_scroll_buffer():
+        _ab_set_color(pos, _ab_get_background_color(), _ab_get_orientation())
+    _ab_purge_scroll_buffer()
+
 def _ab_set_digit(digit, color, orientation):
     if digit < 0 or digit > 9:
         return
     for pos in _ab_get_const('DIGITS')[digit]:
         _ab_set_color(pos, color, orientation)
+
+def _ab_scroll_digits(digits, color, interval):
+    w = _ab_get_const('LED_WIDTH')
+    for d in [int(v) for v in str(digits)]:
+        for x in range(1, w + 1):
+            for p in _ab_get_digit_positions(d):
+                if p % w == x:
+                    _ab_update_scroll_buffer(w + w * ((p - 1) // w))
+            _ab_display_scroll_buffer(color, interval)
+    for x in range(1, w + 1):
+        _ab_display_scroll_buffer(color, interval)
 
 _ab_update_orientation()

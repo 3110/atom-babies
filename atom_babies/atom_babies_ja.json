@@ -205,6 +205,16 @@
       ]
     },
     {
+      "name": "scroll_digits",
+      "type": "execute",
+      "params": [
+        { "name": "数値をスクロール表示する", "type": "label" },
+        { "name": "_digits", "type": "variable" },
+        { "name": "_color", "type": "variable" },
+        { "name": "_interval_ms", "type": "variable" }
+      ]
+    },
+    {
       "name": "get_version",
       "type": "value",
       "params": [{ "name": "バージョンの取得", "type": "label" }]
