@@ -66,15 +66,15 @@ ATOM Babies のカスタムブロックを使って作ったプログラム（m5
 
 ATOM Babies の顔（ボタン）を押すたびに，まばたきを始めたり止めたりします。まばたきの設定はデフォルト（1 回のまばたき，目を開けている時間が 500 ミリ秒，目を閉じている時間が 100 ミリ秒，次のまばたきを始めるまでの間隔が 1000 ミリ秒）です。
 
-[![samples/blink.m5f](https://i.gyazo.com/164b711efc9d2a0e0296c6bdf9694a44.png)](https://gyazo.com/164b711efc9d2a0e0296c6bdf9694a44)
+[![samples/blink.m5f](https://i.gyazo.com/9ba20c8272b57e58b4e7d3c503239f06.png)](https://gyazo.com/9ba20c8272b57e58b4e7d3c503239f06)
 
 ### おじぎする（`samples/bow.m5f`）
 
-[![samples/bow.m5f](https://i.gyazo.com/51115ebf0233275e3ced754b50e8eebb.png)](https://gyazo.com/51115ebf0233275e3ced754b50e8eebb)
-
-ATOM Babies の顔（ボタン）を押すとおじぎをします。押すごとにおじぎをする回数が増えます。
+[![samples/bow.m5f](https://i.gyazo.com/2f97b029257fe28b5b12c54dee7ba3e5.png)](https://gyazo.com/2f97b029257fe28b5b12c54dee7ba3e5)
 
 ### 数字を表示する（`samples/digits.m5f`）
+
+[![samples/digits.m5f](https://i.gyazo.com/c372aa67a1a02dbc1abfe3a5bd818176.png)](https://gyazo.com/c372aa67a1a02dbc1abfe3a5bd818176)
 
 ATOM Babies の顔（ボタン）を押すたびに 0 から順に数字が表示されます。2 桁以上の数字は各桁を順に表示します。
 
@@ -97,7 +97,7 @@ ATOM MatrixにATOM MateとPIR Hatを接続
 PIR は Passive pyroelectric infrared detector（受動焦電型赤外線検出器）の略で，人間が発する赤外線を検知し，目の前にいるかを判断します。
 PIR Hat の仕様で，いったん検知した後，次に検知するまでに 2 秒間の遅れがあります。
 
-[![samples/greeting.m5](https://i.gyazo.com/a1bf42998acf3b3b3bdb82d4d4d77913.png)](https://gyazo.com/a1bf42998acf3b3b3bdb82d4d4d77913)
+[![samples/greeting.m5](https://i.gyazo.com/222a273c32f6ba00ed579ac12638610b.png)](https://gyazo.com/222a273c32f6ba00ed579ac12638610b)
 
 ## 付録：UiFlow Custom Block Generator の使い方
 
