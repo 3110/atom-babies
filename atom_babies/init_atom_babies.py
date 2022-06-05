@@ -168,6 +168,7 @@ def _ab_get_background_color():
 
 def _ab_set_orientation(orientation):
     _ab_set_global('orientation', orientation)
+    _ab_set_auto_orientation(False)
 
 
 def _ab_get_orientation():
