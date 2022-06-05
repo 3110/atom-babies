@@ -281,7 +281,7 @@ def _ab_update_scroll_buffer(pos):
 def _ab_purge_scroll_buffer():
     w = _ab_get_const('LED_WIDTH')
     _ab_set_global('scroll_buffer',
-        [p - 1 for p in _ab_global['scroll_buffer'] if (p - 1) % w != 0])
+        [p - 1 for p in _ab_get_global('scroll_buffer') if (p - 1) % w != 0])
 
 def _ab_get_digit_positions(digit):
     return _ab_get_const('DIGITS')[digit]
