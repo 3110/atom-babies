@@ -62,13 +62,23 @@ ATOM Babies のカスタムブロックを使って作ったプログラム（m5
 
 ## サンプルの説明
 
-### `samples/bow.m5f`
+### まばたきをする（`samples/blink.m5f`）
+
+ATOM Babies の顔（ボタン）を押すたびに，まばたきを始めたり止めたりします。まばたきの設定はデフォルト（1 回のまばたき，目を開けている時間が 500 ミリ秒，目を閉じている時間が 100 ミリ秒，次のまばたきを始めるまでの間隔が 1000 ミリ秒）です。
+
+[![samples/blink.m5f](https://i.gyazo.com/164b711efc9d2a0e0296c6bdf9694a44.png)](https://gyazo.com/164b711efc9d2a0e0296c6bdf9694a44)
+
+### おじぎする（`samples/bow.m5f`）
 
 [![samples/bow.m5f](https://i.gyazo.com/51115ebf0233275e3ced754b50e8eebb.png)](https://gyazo.com/51115ebf0233275e3ced754b50e8eebb)
 
 ATOM Babies の顔（ボタン）を押すとおじぎをします。押すごとにおじぎをする回数が増えます。
 
-### `samples/greeting.m5f`
+### 数字を表示する（`samples/digits.m5f`）
+
+ATOM Babies の顔（ボタン）を押すたびに 0 から順に数字が表示されます。2 桁以上の数字は各桁を順に表示します。
+
+### 人が来たらあいさつする（`samples/greeting.m5f`）
 
 <p align="center">
 <a href="https://youtu.be/hI7jYVK7nX0"><img src="https://img.youtube.com/vi/hI7jYVK7nX0/0.jpg" width="480"/></a><br>
@@ -88,16 +98,6 @@ PIR は Passive pyroelectric infrared detector（受動焦電型赤外線検出�
 PIR Hat の仕様で，いったん検知した後，次に検知するまでに 2 秒間の遅れがあります。
 
 [![samples/greeting.m5](https://i.gyazo.com/a1bf42998acf3b3b3bdb82d4d4d77913.png)](https://gyazo.com/a1bf42998acf3b3b3bdb82d4d4d77913)
-
-### `samples/blink.m5f`
-
-ATOM Babies の顔（ボタン）を押すたびに，まばたきを始めたり止めたりします。まばたきの設定はデフォルト（1 回のまばたき，目を開けている時間が 500 ミリ秒，目を閉じている時間が 100 ミリ秒，次のまばたきを始めるまでの間隔が 1000 ミリ秒）です。
-
-[![samples/blink.m5f](https://i.gyazo.com/164b711efc9d2a0e0296c6bdf9694a44.png)](https://gyazo.com/164b711efc9d2a0e0296c6bdf9694a44)
-
-### `samples/digits.m5f`
-
-ATOM Babies の顔（ボタン）を押すたびに 0 から順に数字が表示されます。2 桁以上の数字は各桁を順に表示します。
 
 ## 付録：UiFlow Custom Block Generator の使い方
 
