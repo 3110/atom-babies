@@ -185,6 +185,11 @@
       ]
     },
     {
+      "name": "is_blinking",
+      "type": "value",
+      "params": [{ "name": "まばたきしているか？", "type": "label" }]
+    },
+    {
       "name": "get_blink_interval_values",
       "type": "value",
       "params": [

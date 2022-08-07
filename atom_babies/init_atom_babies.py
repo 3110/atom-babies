@@ -236,6 +236,10 @@ def _ab_terminate_blink():
 def _ab_get_blink_interval():
     return _ab_get_const('BLINK_INTERVAL')
 
+
+def _ab_is_blinking():
+    return _ab_get_global('blink_running')
+
 def _ab_set_gravity_threshold(threshold):
     _ab_set_global('gravity_threshold', threshold)
 
