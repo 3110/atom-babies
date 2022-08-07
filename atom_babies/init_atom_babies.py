@@ -52,6 +52,8 @@ _ab_const = {
     'DEFAULT_BLINK_INTERVAL_FUNCTION': '_ab_get_blink_interval',
 }
 
+_ab_lock = _ab_t.allocate_lock()
+
 if 'imu' not in sys.modules:
     import imu
     imu0 = imu.IMU()
@@ -94,11 +96,13 @@ def _ab_get_led_position(orientation, position):
 
 
 def _ab_fill(color):
-    rgb.setColorFrom(_ab_get_const('MIN_LED_POS'), _ab_get_const('MAX_LED_POS'), color)  # type: ignore # noqa: F821
+    with _ab_lock:
+        rgb.setColorFrom(_ab_get_const('MIN_LED_POS'), _ab_get_const('MAX_LED_POS'), color)  # type: ignore # noqa: F821
 
 
 def _ab_set_color(pos, color, orientation):
-    rgb.setColor(_ab_get_led_position(orientation, pos), color)  # type: ignore # noqa: F821
+    with _ab_lock:
+        rgb.setColor(_ab_get_led_position(orientation, pos), color)  # type: ignore # noqa: F821
 
 
 def _ab_get_eye_position(pos):
@@ -194,21 +198,17 @@ def _ab_get_function_name(name):
         return ''.join(['_{:02X}'.format(b) for b in name.encode()])
 
 
-_ab_lock = _ab_t.allocate_lock()
-
-
 def _ab_blink_task():
     while _ab_get_global('blink_thread_running'):
         if _ab_get_global('blink_running'):
-            with _ab_lock:
-                _func = _ab_get_function_name(_ab_get_global('blink_interval_function'))
-                _intervals = globals()[_func]()
-                for _ in range(_intervals.get('LOOP', 1)):
-                    time.sleep_ms(_intervals.get('OPEN', 500))
-                    _ab_close_eyes()
-                    time.sleep_ms(_intervals.get('CLOSE', 100))
-                    _ab_open_eyes()
-                time.sleep_ms(_intervals.get('INTERVAL', 1000))
+            _func = _ab_get_function_name(_ab_get_global('blink_interval_function'))
+            _intervals = globals()[_func]()
+            for _ in range(_intervals['LOOP']):
+                time.sleep_ms(_intervals['OPEN'])
+                _ab_close_eyes()
+                time.sleep_ms(_intervals['CLOSE'])
+                _ab_open_eyes()
+            time.sleep_ms(_intervals['INTERVAL'])
         else:
             time.sleep_ms(1)
 
