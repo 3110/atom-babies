@@ -3,12 +3,12 @@
 ※Arduino IDE や PlatformIO で実装する場合は[Arduino 版 ATOM Babies](https://github.com/3110/atom-babies-arduino/)を参照してください。
 
 <div align="center">
-<img src="https://i.gyazo.com/2420a18230e2d426adf16d23abd833e6.jpg" alt="ATOM Babies" width="480"/>
+<img src="https://i.gyazo.com/a451198da7ae3f5bf32a1002d3c13a27.png" alt="ATOM Babies" width="480"/>
 </div>
 
 ## ATOM Babies とは
 
-ATOM Babies は M5Stack 社の<a href="https://shop.m5stack.com/collections/atom-series/products/atom-matrix-esp32-development-kit">ATOM Matrix</a>を顔とし，<a href="https://shop.m5stack.com/products/atom-mate">ATOM Mate</a>を利用して M5Stick C シリーズで使用する Hat を胴体にしたかわいいいきものです。Hat だけでなく，M5Stack 用に用意されているユニットも使用できるので，それらの機能を活用してさまざまな能力を持つ ATOM Babies をつくることができます。
+ATOM Babies は M5Stack 社の<a href="https://shop.m5stack.com/collections/atom-series/products/atom-matrix-esp32-development-kit">ATOM Matrix</a>を顔とし，<a href="https://shop.m5stack.com/products/atom-mate">ATOM Mate</a>を利用して M5StickC シリーズで使用する Hat を胴体にしたかわいいいきものです。Hat だけでなく，M5Stack 用に用意されているユニットも使用できるので，それらの機能を活用してさまざまな能力を持つ ATOM Babies をつくることができます。
 
 ちなみに，ATOM Babies の名付け親は M5Stack 社 CEO の Jimmy Lai さんです。
 
