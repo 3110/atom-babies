@@ -3,12 +3,12 @@
 ※Arduino IDE や PlatformIO で実装する場合は[Arduino 版 ATOM Babies](https://github.com/3110/atom-babies-arduino/)を参照してください。
 
 <div align="center">
-<img src="https://i.gyazo.com/e46dc64eac0adfe1591c9fb7c9dc737b.jpg" width="480"/>
+<img src="https://i.gyazo.com/a451198da7ae3f5bf32a1002d3c13a27.png" alt="ATOM Babies" width="480"/>
 </div>
 
 ## ATOM Babies とは
 
-ATOM Babies は M5Stack 社の<a href="https://shop.m5stack.com/collections/atom-series/products/atom-matrix-esp32-development-kit">ATOM Matrix</a>を顔とし，<a href="https://shop.m5stack.com/products/atom-mate">ATOM Mate</a>を利用して M5Stick C シリーズで使用する Hat を胴体にしたかわいいいきものです。Hat だけでなく，M5Stack 用に用意されているユニットも使用できるので，それらの機能を活用してさまざまな能力を持つ ATOM Babies をつくることができます。
+ATOM Babies は M5Stack 社の<a href="https://shop.m5stack.com/collections/atom-series/products/atom-matrix-esp32-development-kit">ATOM Matrix</a>を顔とし，<a href="https://shop.m5stack.com/products/atom-mate">ATOM Mate</a>を利用して M5StickC シリーズで使用する Hat を胴体にしたかわいいいきものです。Hat だけでなく，M5Stack 用に用意されているユニットも使用できるので，それらの機能を活用してさまざまな能力を持つ ATOM Babies をつくることができます。
 
 ちなみに，ATOM Babies の名付け親は M5Stack 社 CEO の Jimmy Lai さんです。
 
@@ -28,13 +28,9 @@ UiFlow を使用するには，PC に M5Burner をインストールし，M5Burn
 
 ### M5Burner のインストールと UiFlow ファームウェアの書き込み
 
-ATOM Matrix に UiFlow のファームウェアを書き込むため，PC に M5Burner をインストールしてください。インストール方法やファームウェアの書き込み方については，「[M5Burner の使いかた](https://zenn.dev/saitotetsuya/articles/m5stack_m5burner)」を参照してください。
+[![M5Burnerの画面](https://i.gyazo.com/d3925e4e03ac1245d915d8533861a1fd.png)](https://gyazo.com/d3925e4e03ac1245d915d8533861a1fd)
 
-[![M5Burnerの画面](https://i.gyazo.com/502735c631de220e7fcac8b5088df9a9.png)](https://gyazo.com/502735c631de220e7fcac8b5088df9a9)
-
-ATOM Babies に必要な ATOM Matrix 用の UiFlow ファームウェアは，M5Burner の画面左で ATOM を選択し，「UIFLOW(MATRIX)」にある「Download」ボタンを押すとダウンロードできます。
-
-これ以降の手順は「[M5Burner の使いかた](https://zenn.dev/saitotetsuya/articles/m5stack_m5burner)」の「[8.2 ファームウェアのダウンロード](https://zenn.dev/saitotetsuya/articles/m5stack_m5burner#8.2-%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0%E3%82%A6%E3%82%A7%E3%82%A2%E3%81%AE%E3%83%80%E3%82%A6%E3%83%B3%E3%83%AD%E3%83%BC%E3%83%89)」を参照してください。
+ATOM Matrix に UiFlow のファームウェアを書き込むため，PC に M5Burner をインストールしてください。M5Burner のインストール方法や ATOM Babies に必要な ATOM Matrix 用の UiFlow ファームウェアの書き込み方については，「[M5Burner v3 の使いかた](https://zenn.dev/saitotetsuya/articles/m5stack_m5burner_v3)」を参照してください。
 
 ### ATOM Babies のカスタムブロックを UiFlow に読み込む
 
