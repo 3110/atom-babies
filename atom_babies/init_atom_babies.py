@@ -58,9 +58,8 @@ if 'imu' not in sys.modules:
     import imu
     imu0 = imu.IMU()
 
-def _ab_get_const(key):
-   return _ab_const[key]
-
+def _ab_get_const(key, default=None):
+   return _ab_const.get(key, default)
 
 def _ab_get_rgb(r, g, b):
     return int('0x{:02x}{:02x}{:02x}'.format(r, g, b))
