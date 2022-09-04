@@ -113,7 +113,7 @@ ATOM MatrixにATOM MateとENV III Hatを接続
 
 ENV III Hat は本体の温度に影響を受けるため，補正値（`temperature_correction`）を引いて調整してください。
 
-[![samples/env.m5f](https://i.gyazo.com/86cb91dceecae3725a360e8a478d4ed3.png)](https://gyazo.com/86cb91dceecae3725a360e8a478d4ed3)
+[![samples/env.m5f](https://i.gyazo.com/e7a70289ae78f8174c37e49907c2c167.png)](https://gyazo.com/e7a70289ae78f8174c37e49907c2c167)
 
 ## 付録：UiFlow Custom Block Generator の使い方
 
