@@ -93,7 +93,27 @@ ATOM MatrixにATOM MateとPIR Hatを接続
 PIR は Passive pyroelectric infrared detector（受動焦電型赤外線検出器）の略で，人間が発する赤外線を検知し，目の前にいるかを判断します。
 PIR Hat の仕様で，いったん検知した後，次に検知するまでに 2 秒間の遅れがあります。
 
-[![samples/greeting.m5](https://i.gyazo.com/222a273c32f6ba00ed579ac12638610b.png)](https://gyazo.com/222a273c32f6ba00ed579ac12638610b)
+[![samples/greeting.m5f](https://i.gyazo.com/222a273c32f6ba00ed579ac12638610b.png)](https://gyazo.com/222a273c32f6ba00ed579ac12638610b)
+
+### 温度・湿度・気圧を表示する（`samples/env.m5f`）
+
+<p align="center">
+<a href="https://youtu.be/N_ciU3XL7x8"><img src="https://img.youtube.com/vi/N_ciU3XL7x8/0.jpg" width="480"/></a><br>
+ATOM Babies: 温度・湿度・気圧を表示する（YouTube）
+</p>
+
+ATOM Babies の顔（ボタン）を押すと，気温・湿度・気圧がそれぞれ赤色・青色・白色の数値でスクロールして連続表示されます。
+
+<p align="center">
+<a href="https://gyazo.com/db8d656a80df7c2210d59da4e51a49e2"><img src="https://i.gyazo.com/db8d656a80df7c2210d59da4e51a49e2.jpg" alt="Image from Gyazo" width="480"/></a><br>
+ATOM MatrixにATOM MateとENV III Hatを接続
+</p>
+
+[ATOM Mate](https://shop.m5stack.com/products/atom-mate)を使用して[ENV III Hat](https://shop.m5stack.com/products/m5stickc-env-hat-iii-sht30-qmp6988)を接続して利用します。USB-C の口を上にした状態が正しい向きになります。
+
+ENV III Hat は本体の温度に影響を受けるため，補正値（`temperature_correction`）を引いて調整してください。
+
+[![samples/env.m5f](https://i.gyazo.com/e7a70289ae78f8174c37e49907c2c167.png)](https://gyazo.com/e7a70289ae78f8174c37e49907c2c167)
 
 ## 付録：UiFlow Custom Block Generator の使い方
 

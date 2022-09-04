@@ -3,7 +3,7 @@ import sys
 import time
 
 _ab_const = {
-    'VERSION': "v0.0.5",
+    'VERSION': "v0.0.6",
     'MIN_LED_POS': 1,
     'MAX_LED_POS': 25,
     'LED_WIDTH': 5,
@@ -43,6 +43,10 @@ _ab_const = {
         [2, 3, 4, 7, 9, 12, 13, 14, 17, 19, 22, 23, 24],
         [2, 3, 4, 7, 9, 12, 13, 14, 19, 22, 23, 24],
     ],
+    'SYMBOLS': {
+        '-' : [12, 13, 14],
+        '.' : [23]
+    },
     'BLINK_INTERVAL': {
         'LOOP': 1,
         'OPEN': 500,
@@ -58,9 +62,8 @@ if 'imu' not in sys.modules:
     import imu
     imu0 = imu.IMU()
 
-def _ab_get_const(key):
-   return _ab_const[key]
-
+def _ab_get_const(key, default=None):
+   return _ab_const.get(key, default)
 
 def _ab_get_rgb(r, g, b):
     return int('0x{:02x}{:02x}{:02x}'.format(r, g, b))
@@ -289,7 +292,10 @@ def _ab_purge_scroll_buffer():
         [p - 1 for p in _ab_get_global('scroll_buffer') if (p - 1) % w != 0])
 
 def _ab_get_digit_positions(digit):
-    return _ab_get_const('DIGITS')[digit]
+    if digit in _ab_get_const('SYMBOLS'):
+        return _ab_get_const('SYMBOLS')[digit]
+    else:
+        return _ab_get_const('DIGITS')[int(digit)]
 
 def _ab_display_scroll_buffer(color, interval):
     _ab_update_orientation()
@@ -308,7 +314,7 @@ def _ab_set_digit(digit, color, orientation):
 
 def _ab_scroll_digits(digits, color, interval):
     w = _ab_get_const('LED_WIDTH')
-    for d in [int(v) for v in str(digits)]:
+    for d in str(digits):
         for x in range(1, w + 1):
             for p in _ab_get_digit_positions(d):
                 if p % w == x:
