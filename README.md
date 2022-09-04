@@ -98,7 +98,7 @@ PIR Hat の仕様で，いったん検知した後，次に検知するまでに
 ### 温度・湿度・気圧を表示する（`samples/env.m5f`）
 
 <p align="center">
-<a href="https://youtu.be/Xjt_8UTjYiU"><img src="https://img.youtube.com/vi/Xjt_8UTjYiU/0.jpg" width="480"/></a><br>
+<a href="https://youtu.be/N_ciU3XL7x8"><img src="https://img.youtube.com/vi/N_ciU3XL7x8/0.jpg" width="480"/></a><br>
 ATOM Babies: 温度・湿度・気圧を表示する（YouTube）
 </p>
 
