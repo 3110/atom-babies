@@ -95,6 +95,18 @@ PIR Hat の仕様で，いったん検知した後，次に検知するまでに
 
 [![samples/greeting.m5f](https://i.gyazo.com/222a273c32f6ba00ed579ac12638610b.png)](https://gyazo.com/222a273c32f6ba00ed579ac12638610b)
 
+### 温度・湿度・気圧を表示する（`samples/env.m5f`）
+
+<p align="center">
+<a href="https://gyazo.com/db8d656a80df7c2210d59da4e51a49e2"><img src="https://i.gyazo.com/db8d656a80df7c2210d59da4e51a49e2.jpg" width="480"/></a>
+</p>
+
+[ATOM Mate](https://shop.m5stack.com/products/atom-mate)を使用して[ENV III Hat](https://shop.m5stack.com/products/m5stickc-env-hat-iii-sht30-qmp6988)を接続して利用します。USB-C の口を上にした状態が正しい向きになります。
+
+ATOM Babies の顔（ボタン）を押すと，気温・湿度・気圧がそれぞれ赤色・青色・白色の数値でスクロールして連続表示されます。
+
+[![samples/env.m5f](https://i.gyazo.com/86cb91dceecae3725a360e8a478d4ed3.png)](https://gyazo.com/86cb91dceecae3725a360e8a478d4ed3)
+
 ## 付録：UiFlow Custom Block Generator の使い方
 
 `pip`で UiFlow Custom Block Generator をインストールします。
