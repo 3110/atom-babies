@@ -43,6 +43,10 @@ _ab_const = {
         [2, 3, 4, 7, 9, 12, 13, 14, 17, 19, 22, 23, 24],
         [2, 3, 4, 7, 9, 12, 13, 14, 19, 22, 23, 24],
     ],
+    'SYMBOLS': {
+        '-' : [12, 13, 14],
+        '.' : [23]
+    },
     'BLINK_INTERVAL': {
         'LOOP': 1,
         'OPEN': 500,
@@ -288,7 +292,10 @@ def _ab_purge_scroll_buffer():
         [p - 1 for p in _ab_get_global('scroll_buffer') if (p - 1) % w != 0])
 
 def _ab_get_digit_positions(digit):
-    return _ab_get_const('DIGITS')[digit]
+    if digit in _ab_get_const('SYMBOLS'):
+        return _ab_get_const('SYMBOLS')[digit]
+    else:
+        return _ab_get_const('DIGITS')[int(digit)]
 
 def _ab_display_scroll_buffer(color, interval):
     _ab_update_orientation()
@@ -307,7 +314,7 @@ def _ab_set_digit(digit, color, orientation):
 
 def _ab_scroll_digits(digits, color, interval):
     w = _ab_get_const('LED_WIDTH')
-    for d in [int(v) for v in str(digits)]:
+    for d in str(digits):
         for x in range(1, w + 1):
             for p in _ab_get_digit_positions(d):
                 if p % w == x:
