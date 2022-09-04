@@ -3,7 +3,7 @@ import sys
 import time
 
 _ab_const = {
-    'VERSION': "v0.0.5",
+    'VERSION': "v0.0.6",
     'MIN_LED_POS': 1,
     'MAX_LED_POS': 25,
     'LED_WIDTH': 5,
