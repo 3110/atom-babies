@@ -93,7 +93,7 @@ ATOM MatrixにATOM MateとPIR Hatを接続
 PIR は Passive pyroelectric infrared detector（受動焦電型赤外線検出器）の略で，人間が発する赤外線を検知し，目の前にいるかを判断します。
 PIR Hat の仕様で，いったん検知した後，次に検知するまでに 2 秒間の遅れがあります。
 
-[![samples/greeting.m5](https://i.gyazo.com/222a273c32f6ba00ed579ac12638610b.png)](https://gyazo.com/222a273c32f6ba00ed579ac12638610b)
+[![samples/greeting.m5f](https://i.gyazo.com/222a273c32f6ba00ed579ac12638610b.png)](https://gyazo.com/222a273c32f6ba00ed579ac12638610b)
 
 ## 付録：UiFlow Custom Block Generator の使い方
 
