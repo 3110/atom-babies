@@ -220,6 +220,25 @@
       ]
     },
     {
+      "name": "set_char",
+      "type": "execute",
+      "params": [
+        { "name": "文字を表示する", "type": "label" },
+        { "name": "_char", "type": "variable" },
+        { "name": "_color", "type": "variable" }
+      ]
+    },
+    {
+      "name": "scroll_text",
+      "type": "execute",
+      "params": [
+        { "name": "文字列をスクロール表示する", "type": "label" },
+        { "name": "_text", "type": "variable" },
+        { "name": "_color", "type": "variable" },
+        { "name": "_interval_ms", "type": "variable" }
+      ]
+    },
+    {
       "name": "get_version",
       "type": "value",
       "params": [{ "name": "バージョンの取得", "type": "label" }]
