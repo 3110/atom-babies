@@ -3,7 +3,7 @@ import sys
 import time
 
 _ab_const = {
-    'VERSION': "v0.0.6",
+    'VERSION': "v0.0.7",
     'MIN_LED_POS': 1,
     'MAX_LED_POS': 25,
     'LED_WIDTH': 5,
@@ -45,7 +45,23 @@ _ab_const = {
     ],
     'SYMBOLS': {
         '-' : [12, 13, 14],
-        '.' : [23]
+        '.' : [23],
+        '!' : [3, 8, 13, 23],
+    },
+    'ALPHABETS': {
+        'a': [2, 3, 4, 9, 12, 13, 14, 17, 19, 22, 23, 24],
+        'A': [3, 7, 9, 12, 13, 14, 17, 19, 22, 24],
+        'e': [2, 3, 4, 6, 8, 12, 13, 14, 17, 22, 23, 24],
+        'E': [2, 3, 4, 7, 12, 13, 14, 17, 22, 23, 24],
+        'M': [2, 4, 7, 8, 9, 12, 14, 17, 19, 22, 24],
+        'r': [1, 6, 8, 9, 11, 12, 15, 16, 21],
+        'R': [2, 3, 7, 9, 12, 13, 17, 19, 22, 24],
+        's': [3, 4, 7, 12, 13, 14, 19, 22, 23],
+        'S': [2, 3, 4, 7, 12, 13, 14, 19, 22, 23, 24],
+        'x': [12, 14, 18, 22, 24],
+        'X': [2, 4, 7, 9, 13, 17, 19, 22, 24],
+        'y': [2, 4, 7, 9, 12, 13, 14, 19, 22, 23, 24],
+        'Y': [2, 4, 7, 9, 12, 13, 14, 19, 23],
     },
     'BLINK_INTERVAL': {
         'LOOP': 1,
@@ -55,6 +71,9 @@ _ab_const = {
     },
     'DEFAULT_BLINK_INTERVAL_FUNCTION': '_ab_get_blink_interval',
 }
+_ab_const['CHAR_TYPES'] = [
+    _ab_const['ALPHABETS'], _ab_const['SYMBOLS'], {str(d): v for d, v in enumerate(_ab_const['DIGITS'])}
+]
 
 _ab_lock = _ab_t.allocate_lock()
 
@@ -280,6 +299,13 @@ def _ab_update_orientation():
 def _ab_update():
     return _ab_update_orientation()
 
+def _ab_get_char_positions(c):
+    for t in _ab_const['CHAR_TYPES']:
+        if c in t:
+            return t[c]
+    else:
+        return []
+
 def _ab_get_scroll_buffer():
     return _ab_get_global('scroll_buffer')
 
@@ -291,12 +317,6 @@ def _ab_purge_scroll_buffer():
     _ab_set_global('scroll_buffer',
         [p - 1 for p in _ab_get_global('scroll_buffer') if (p - 1) % w != 0])
 
-def _ab_get_digit_positions(digit):
-    if digit in _ab_get_const('SYMBOLS'):
-        return _ab_get_const('SYMBOLS')[digit]
-    else:
-        return _ab_get_const('DIGITS')[int(digit)]
-
 def _ab_display_scroll_buffer(color, interval):
     _ab_update_orientation()
     for pos in _ab_get_scroll_buffer():
@@ -306,6 +326,27 @@ def _ab_display_scroll_buffer(color, interval):
         _ab_set_color(pos, _ab_get_background_color(), _ab_get_orientation())
     _ab_purge_scroll_buffer()
 
+def _ab_set_char(c, color, orientation):
+    for t in _ab_const['CHAR_TYPES']:
+        if c in t:
+            for pos in t[c]:
+                _ab_set_color(pos, color, orientation)
+            break
+
+def _ab_scroll_text(text, color, interval):
+    w = _ab_get_const('LED_WIDTH')
+    for c in text:
+        for x in range(1, w + 1):
+            if c == ' ':
+                _ab_display_scroll_buffer(color, interval)
+            for p in _ab_get_char_positions(c):
+                if p % w == x:
+                    _ab_update_scroll_buffer(w + w * ((p - 1) // w))
+            _ab_display_scroll_buffer(color, interval)
+    for x in range(1, w + 1):
+        _ab_display_scroll_buffer(color, interval)
+
+
 def _ab_set_digit(digit, color, orientation):
     if digit < 0 or digit > 9:
         return
@@ -313,14 +354,6 @@ def _ab_set_digit(digit, color, orientation):
         _ab_set_color(pos, color, orientation)
 
 def _ab_scroll_digits(digits, color, interval):
-    w = _ab_get_const('LED_WIDTH')
-    for d in str(digits):
-        for x in range(1, w + 1):
-            for p in _ab_get_digit_positions(d):
-                if p % w == x:
-                    _ab_update_scroll_buffer(w + w * ((p - 1) // w))
-            _ab_display_scroll_buffer(color, interval)
-    for x in range(1, w + 1):
-        _ab_display_scroll_buffer(color, interval)
+    _ab_scroll_text(str(digits), color, interval)
 
 _ab_update_orientation()
